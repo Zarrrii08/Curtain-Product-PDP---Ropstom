@@ -246,14 +246,14 @@ To hide Fabric Panel from cart display:
 ## 🔗 Demo
 
 **Store URL:**
-https://task-am.myshopify.com/products/curtain
+https://3bp9ihkwtj93q4e6-76083167521.shopifypreview.com/products_preview
 
 **Password:**
-1122
+zarrii
 
 ---
 
 ## 📂 Repository
 
 GitHub Repository:
-(Add your repo link here)
+https://github.com/Zarrrii08/Curtain-Product-PDP---Ropstom/
