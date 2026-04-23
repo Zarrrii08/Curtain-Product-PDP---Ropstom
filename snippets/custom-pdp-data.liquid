@@ -1,0 +1,9 @@
+<script>
+  window.crProduct = {
+    variants: {{ product.variants | json }},
+    fabricPanelMap: {{ product.metafields.custom.fabric_panel_count.value | json }},
+    priceMap: {{ product.metafields.custom.price_mappings.value | json }},
+    currency: "{{ shop.currency }}",
+    locale: "{{ shop.locale }}"
+  };
+</script>

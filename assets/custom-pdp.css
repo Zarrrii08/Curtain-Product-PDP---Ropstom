@@ -1,0 +1,68 @@
+.custom-curtain-pdp {
+  padding: 40px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.product-single {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-single__media-group,
+.product-single__info-container {
+  width: 48%;
+}
+
+.product-single__media-group {
+  position: sticky;
+  top: 40px;
+}
+
+.product-single__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* Configurator */
+.curtain-product-configurator {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.configurator-section {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.configurator-section-title {
+  width: 30%;
+}
+
+.select-width,
+.select-drop {
+  width: 100%;
+  border: none;
+}
+
+/* Price */
+.dynamic-price {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* Button */
+.btn--add-to-cart {
+  width: 100%;
+  padding: 15px;
+  background: #2f2f2f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn--add-to-cart.sold-out {
+  background: #ccc;
+}

@@ -1,0 +1,68 @@
+{{ 'custom-pdp.css' | asset_url | stylesheet_tag }}
+{{ 'custom-pdp.js' | asset_url | script_tag }}
+
+{% render 'custom-pdp-data' %}
+
+<div class="custom-curtain-pdp">
+  <div class="page-width">
+    <div class="product-single">
+
+      <!-- LEFT: MEDIA -->
+      <div class="product-single__media-group">
+        {% for media in product.media %}
+          <img src="{{ media | img_url: '800x' }}" alt="">
+        {% endfor %}
+      </div>
+
+      <!-- RIGHT: INFO -->
+      <div class="product-single__info-container">
+        <h1>{{ product.title }}</h1>
+
+        <!-- WIDTH -->
+        <div class="configurator-section">
+          <h3>Width</h3>
+          <select id="width-selector">
+            {% for value in product.metafields.custom.width.value %}
+              <option>{{ value }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <!-- DROP -->
+        <div class="configurator-section">
+          <h3>Drop</h3>
+          <select id="drop-selector">
+            {% for option in product.options_with_values %}
+              {% if option.name == 'Drop' %}
+                {% for value in option.values %}
+                  <option>{{ value }}</option>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+
+        <!-- PRICE -->
+        <div class="product-price-container">
+          <span class="cart-price"></span>
+        </div>
+
+        <!-- FORM -->
+        {% form 'product', product %}
+          <input type="hidden" name="id" id="variant-id-input">
+          <button type="submit" class="btn--add-to-cart">
+            Add to cart
+          </button>
+        {% endform %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom PDP",
+  "presets": [{ "name": "Custom PDP" }]
+}
+{% endschema %}
